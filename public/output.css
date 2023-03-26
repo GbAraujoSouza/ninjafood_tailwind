@@ -550,8 +550,8 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.font-serif{
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+.font-body{
+  font-family: Nunito;
 }
 
 .text-2xl{
