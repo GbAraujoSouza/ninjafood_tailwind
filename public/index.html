@@ -13,7 +13,7 @@
     <title>Ninja Food</title>
   </head>
   <body class="text-gray-600 font-body">
-    <div class="grid md:grid-cols-3">
+    <div class="grid md:grid-cols-3 min-h-screen">
       <!--Content wrapper -->
       <div class="md:col-span-1 md:flex md:justify-end">
         <!-- Nav Start -->
@@ -26,7 +26,10 @@
               <i class="fa-solid fa-bars"></i>
             </div>
           </div>
-          <ul class="text-sm mt-6 md:flex flex-col gap-2 hidden" id="menu">
+          <ul
+            class="text-sm mt-6 md:flex flex-col gap-2 hidden last:mb-3"
+            id="menu"
+          >
             <li class="active-page text-gray-700 font-bold">
               <a href="#" class="px-4 flex justify-end gap-2">
                 <span>Home</span>
@@ -96,12 +99,12 @@
         <div class="flex gap-2 justify-center md:justify-end">
           <a
             href="#"
-            class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white"
+            class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-300"
             >Log in</a
           >
           <a
             href="#"
-            class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white"
+            class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white transition ease-out duration-300"
             >Sign up</a
           >
         </div>
@@ -175,7 +178,7 @@
 
           <div class="flex justify-center">
             <div
-              class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner"
+              class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300"
             >
               Load More
             </div>
