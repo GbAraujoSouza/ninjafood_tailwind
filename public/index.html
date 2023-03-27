@@ -5,32 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/cdcca037dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" defer></script>
     <title>Ninja Food</title>
   </head>
   <body class="text-gray-600 font-body">
-    <div>
+    <div class="grid md:grid-cols-3">
       <!--Content wrapper -->
-      <div>
-        <nav>
-          <div>
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <!-- Nav Start -->
+        <nav class="text-right">
+          <div class="flex justify-between items-center">
             <h1 class="font-bold uppercase p-4 border-b border-grey-100">
-              <a href="/">Food Ninja</a>
+              <a href="/" class="hover:text-gray-800">Food Ninja</a>
             </h1>
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+              <i class="fa-solid fa-bars"></i>
+            </div>
           </div>
-          <ul>
-            <li class="text-gray-700 font-bold">
-              <a href="#">
+          <ul class="text-sm mt-6 md:flex flex-col gap-2 hidden" id="menu">
+            <li class="active-page text-gray-700 font-bold">
+              <a href="#" class="px-4 flex justify-end gap-2">
                 <span>Home</span>
+                <svg
+                  class="w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="px-4 flex justify-end gap-2">
                 <span>About</span>
+                <svg
+                  class="w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
+                  />
+                </svg>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="px-4 flex justify-end gap-2">
                 <span>Contact</span>
+                <svg
+                  class="w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="{1.5}"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46"
+                  />
+                </svg>
               </a>
             </li>
           </ul>
@@ -38,10 +92,18 @@
       </div>
       <!-- End nav-->
 
-      <main class="px-16 py-6">
-        <div>
-          <a href="#" class="text-primary">Log in</a>
-          <a href="#" class="text-primary">Sign up</a>
+      <main class="px-16 py-6 bg-gray-100 md:col-span-2">
+        <div class="flex gap-2 justify-center md:justify-end">
+          <a
+            href="#"
+            class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white"
+            >Log in</a
+          >
+          <a
+            href="#"
+            class="btn text-primary border-primary md:border-2 hover:bg-primary hover:text-white"
+            >Sign up</a
+          >
         </div>
 
         <header>
@@ -54,13 +116,51 @@
             Latest Recipes
           </h4>
 
-          <div class="mt-8">
+          <div class="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             <!-- cards go here bellow-->
-            <div>
-              <img src="img/stew.jpg" alt="stew" />
-              <div>
-                <span>5 Chilli Stew</span>
-                <span>Recipe by Mario</span>
+            <div class="card hover:shadow-lg">
+              <img
+                src="img/stew.jpg"
+                alt="stew"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4">
+                <span class="font-bold">5 Chilli Stew</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <i class="fa-solid fa-clock"></i>
+                <span>25 mins</span>
+              </div>
+            </div>
+            <div class="card hover:shadow-lg">
+              <img
+                src="img/noodles.jpg"
+                alt="noodles"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4">
+                <span class="font-bold">Veg Noodles</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <i class="fa-solid fa-clock"></i>
+                <span>15 mins</span>
+              </div>
+            </div>
+            <div class="card hover:shadow-lg">
+              <img
+                src="img/curry.jpg"
+                alt="curry"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4">
+                <span class="font-bold">Tofu Curry</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <i class="fa-solid fa-clock"></i>
+                <span>40 mins</span>
               </div>
             </div>
           </div>
@@ -73,8 +173,12 @@
             <!-- cards go here bellow -->
           </div>
 
-          <div>
-            <div class="bg-secondary-100 text-secondary-200">Load More</div>
+          <div class="flex justify-center">
+            <div
+              class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner"
+            >
+              Load More
+            </div>
           </div>
         </div>
       </main>
